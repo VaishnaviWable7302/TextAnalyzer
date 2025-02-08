@@ -2,20 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Custom styles */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-gray-100 text-gray-900;
 }
+
+/* Style for textarea focus */
+textarea:focus {
+  @apply outline-none ring-2 ring-blue-500;
+}
+
+/* Card style for the main container */
+.card {
+  @apply max-w-2xl mx-auto p-6 bg-white shadow-lg rounded-lg;
+}
+
